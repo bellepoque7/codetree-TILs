@@ -2,15 +2,17 @@ import sys
 read = sys.stdin.readline
 
 n, m = map(int, read().split())
-# 1. 한 수가 다른 수의 배수일 경우
-# 큰 수가 최소 공배수이다.
 
-# 2. 그렇지 않을 경우 
-# 두 수를 동시에 나눌 수 있는 수를 찾은뒤 각 수를 최대공약수로 나누어 몫을 곱한다. 
+#최대 공약수 변수 초기화
+k = 0
 
-k = max(n,m)
+# 100까지 루프 돌려서 최대공약수를 찾으면 할당
 for i in range(2,100):
     if n%i ==0 and  m%i == 0:
         # print(i)
         k = i
-print(n//k * m//k * k)
+# 최대 공약수가 없다면 서로소. 두수 곱하여 최소공배수 출력
+if k == 0 :
+    print(n*m)
+else:
+    print(n//k * m//k * k)
