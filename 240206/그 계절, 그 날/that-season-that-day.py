@@ -17,43 +17,45 @@ Y, M, D = map(int, read().split())
 # Y, M, D = 1999, 2, 29
 
 Month = ''
-Flag = True
+Flag = False
 #월체크
 if  M in (3,4,5):
     Month = 'Spring'
+    Flag = True
 elif M in (6,7,8):
     Month = 'Summer'
+    Flag = True
 elif M in (9,10,11):
     Month = 'Fall'
+    Flag = True
 elif M in (1,2,12):
     Month = 'Winter'
-else:
-    Flag = False
+    Flag = True
 
 # 존재하는 날짜인지 체크
 if M in (1,3,5,7,8,10,12):
     if 1<= D <= 31:
-        pass
+        Flag = True
     else:
         Flag = False
 elif M in (4,6,9,11):
     if 1<= D <= 30:
-        pass
+        Flag = True
     else:
-        Flag = False
+        pass
 elif M == 2:
     if Y%4 ==0 and Y%100 == 0 and Y%400 == 0 and 1<= D <= 29:
-        pass
+        Flag = True
     elif Y% 4 ==0 and Y%100 == 0 and 1<= D <= 28:
-        pass
+        Flag = True
     elif Y% 4 ==0 and 1<=D <=29:
-        pass
+        Flag = True
     elif Y% 4 !=0 and 1<= D <= 28:
-        pass
+        Flag = True
     else:
-        Flag = False
+        pass
 else:
-    Flag = False
+    pass
 
 
 if Flag:
