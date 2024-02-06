@@ -42,11 +42,13 @@ elif M in (4,6,9,11):
     else:
         Flag = False
 elif M == 2:
-    if Y%4 ==0 and Y%100 == 0 and Y%400 == 0and 1<= D <= 29:
+    if Y%4 ==0 and Y%100 == 0 and Y%400 == 0 and 1<= D <= 29:
         pass
-    elif Y% 4 == 0 and Y%100 ==0 and 1<= D <= 28:
+    elif Y% 4 ==0 and Y%100 == 0 and 1<= D <= 28:
         pass
     elif Y% 4 ==0 and 1<=D <=29:
+        pass
+    elif Y% 4 !=0 and 1<= D <= 28:
         pass
     else:
         Flag = False
