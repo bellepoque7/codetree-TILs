@@ -21,16 +21,12 @@ Flag = False
 #월체크
 if  M in (3,4,5):
     Month = 'Spring'
-    Flag = True
 elif M in (6,7,8):
     Month = 'Summer'
-    Flag = True
 elif M in (9,10,11):
     Month = 'Fall'
-    Flag = True
 elif M in (1,2,12):
     Month = 'Winter'
-    Flag = True
 
 # 존재하는 날짜인지 체크
 if M in (1,3,5,7,8,10,12):
