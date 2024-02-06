@@ -14,7 +14,6 @@ Y, M, D = map(int, read().split())
 # 단 4의 배수면서 100의 배수면 28일까지
 # 단 4의 배수이서 100의 배수지만 400의 배수이면 29일까지
 # 나머지는 29일까지
-# Y, M, D = 200, 2, 29
 
 Month = ''
 Flag = False
@@ -40,14 +39,26 @@ elif M in (4,6,9,11):
     else:
         pass
 elif M == 2:
-    if Y%4 ==0 and Y%100 == 0 and Y%400 == 0 and 1<= D <= 29:
-        Flag = True
-    elif Y% 4 ==0 and Y%100 == 0 and 1<= D <= 28:
-        Flag = True
-    elif Y %4 ==0 and 1<= D<=29:
-        Flag = True
-    elif 1<= D <=28:
-        Flag = True
+    if Y%4 ==0 and Y%100 == 0 and Y%400 == 0:
+        if 1<= D <= 29:
+            Flag = True
+        else: 
+            pass
+    elif Y% 4 ==0 and Y%100 == 0:
+        if 1<= D <= 28:
+            Flag = True
+        else:
+            pass
+    elif Y %4 ==0:
+        if 1<= D<=29:
+            Flag = True
+        else:
+            pass
+    elif Y%4 != 0:
+        if 1<= D <=28:
+            Flag = True
+        else:
+            pass
 else:
     pass
 
