@@ -1,5 +1,4 @@
 n = int(input())
-n = 10
 
 def get_fact(n):
     if n == 1:
